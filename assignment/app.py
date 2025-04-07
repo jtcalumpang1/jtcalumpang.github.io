@@ -17,7 +17,7 @@ def index():
             return render_template("submitted.html", full_name=full_name)
         else:
 
-            return "Please fill out all fields.", 400  
+            return "Please fill out all fields.", 400
 
     return render_template("index.html")
 
