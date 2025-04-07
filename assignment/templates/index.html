@@ -1,19 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Full Name Form</title>
-  <link rel="stylesheet" href="styles.css"> <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Enter Full Name</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
-</head><!DOCTYPE html>
-<html lang="en">
-<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Enter Full Name</title>
@@ -33,63 +20,5 @@
 
         <button type="submit">Submit</button>
     </form>
-</body>
-</html>
-
-<body>
-    <h1>Enter Full Name</h1>
-    <form method="POST">
-        <label for="first_name">First Name:</label>
-        <input type="text" id="first_name" name="first_name" required><br><br>
-
-        <label for="middle_name">Middle Name:</label>
-        <input type="text" id="middle_name" name="middle_name" required><br><br>
-
-        <label for="last_name">Last Name:</label>
-        <input type="text" id="last_name" name="last_name" required><br><br>
-
-        <button type="submit">Submit</button>
-    </form>
-</body>
-</html>
-
-</head>
-<body>
-
-  <h2>Enter Your Full Name</h2>
-
-  <form id="nameForm">
-    <label for="first_name">First Name:</label>
-    <input type="text" id="first_name" required />
-
-    <label for="middle_name">Middle Name:</label>
-    <input type="text" id="middle_name" required />
-
-    <label for="last_name">Last Name:</label>
-    <input type="text" id="last_name" required />
-
-    <button type="submit">Submit</button>
-  </form>
-
-  <div class="result" id="result"></div>
-
-  <script>
-    document.getElementById("nameForm").addEventListener("submit", function(e) {
-      e.preventDefault();
-
-      const first = document.getElementById("first_name").value.trim();
-      const middle = document.getElementById("middle_name").value.trim();
-      const last = document.getElementById("last_name").value.trim();
-
-      if (first && middle && last) {
-        const fullName = `${first} ${middle} ${last}`;
-        localStorage.setItem("fullName", fullName);
-        window.location.href = "submitted.html"; // Redirect to submitted.html
-      } else {
-        document.getElementById("result").textContent = "Please fill out all fields.";
-      }
-    });
-  </script>
-
 </body>
 </html>
